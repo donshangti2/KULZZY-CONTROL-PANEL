@@ -1,1 +1,151 @@
+Kulzzy Radio Control Panel
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kulzzy Radio Control Panel</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100%;
+        background: #020b16;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        padding: 15px;
+    }
+
+    .control-panel {
+        width: 100%;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .panel-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+        width: 100%;
+    }
+
+    .panel {
+        width: 100%;
+        min-width: 0;
+        height: 650px;
+        background: #071525;
+        border: 1px solid rgba(255, 215, 0, 0.25);
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .panel iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        background: #071525;
+    }
+
+    .empty-panel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 650px;
+        border: 1px dashed rgba(255, 215, 0, 0.18);
+        border-radius: 12px;
+        background: #071525;
+    }
+
+    @media (max-width: 900px) {
+        body {
+            padding: 8px;
+        }
+
+        .panel-grid {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .panel,
+        .empty-panel {
+            height: 650px;
+            min-height: 650px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="control-panel">
+
+    <div class="panel-grid">
+
+        <!-- PANEL 1 -->
+        <div class="panel">
+            <iframe
+                src="https://donshangti2.github.io/KULZZY-AUTO-PLAYER/upload.html"
+                title="Kulzzy Upload Manager"
+                loading="eager">
+            </iframe>
+        </div>
+
+        <!-- PANEL 2 -->
+        <div class="panel">
+            <iframe
+                src="https://donshangti2.github.io/KULZZY-AUTO-PLAYER/admin.html"
+                title="Kulzzy Radio Admin"
+                loading="eager">
+            </iframe>
+        </div>
+
+        <!-- PANEL 3 -->
+        <div class="panel">
+            <iframe
+                src="https://donshangti2.github.io/Live-on-air-/admin.html?utm_source=chatgpt.com"
+                title="Kulzzy Live On Air Admin"
+                loading="eager">
+            </iframe>
+        </div>
+
+        <!-- PANEL 4 -->
+        <div class="panel">
+            <iframe
+                src="https://donshangti2.github.io/kulzzy-celebrant-slider/admin.html?utm_source=chatgpt.com"
+                title="Kulzzy Celebrant Slider Admin"
+                loading="eager">
+            </iframe>
+        </div>
+
+        <!-- FUTURE PANEL SPACE 5 -->
+        <div class="empty-panel"></div>
+
+        <!-- FUTURE PANEL SPACE 6 -->
+        <div class="empty-panel"></div>
+
+        <!-- FUTURE PANEL SPACE 7 -->
+        <div class="empty-panel"></div>
+
+        <!-- FUTURE PANEL SPACE 8 -->
+        <div class="empty-panel"></div>
+
+    </div>
+
+</div>
+
+</body>  
+</html>
